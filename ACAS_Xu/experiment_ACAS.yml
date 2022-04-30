@@ -1,0 +1,42 @@
+name: acas
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=4.5=1_gnu
+  - ca-certificates=2022.3.29=h06a4308_1
+  - certifi=2021.10.8=py37h06a4308_2
+  - ld_impl_linux-64=2.35.1=h7274673_9
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=9.3.0=h5101ec6_17
+  - libgomp=9.3.0=h5101ec6_17
+  - libstdcxx-ng=9.3.0=hd4cf53a_17
+  - ncurses=6.3=h7f8727e_2
+  - openssl=1.1.1n=h7f8727e_0
+  - pip=21.2.2=py37h06a4308_0
+  - python=3.7.9=h7579374_0
+  - readline=8.1.2=h7f8727e_1
+  - setuptools=61.2.0=py37h06a4308_0
+  - sqlite=3.38.2=hc218d9a_0
+  - tk=8.6.11=h1ccaba5_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.5=h7b6447c_0
+  - zlib=1.2.12=h7f8727e_2
+  - pip:
+    - cycler==0.11.0
+    - kiwisolver==1.4.2
+    - matplotlib==3.2.1
+    - numpy==1.21.6
+    - onnx==1.11.0
+    - onnx2pytorch==0.3.0
+    - pillow==9.1.0
+    - protobuf==3.20.1
+    - pyparsing==3.0.8
+    - python-dateutil==2.8.2
+    - scipy==1.7.3
+    - six==1.16.0
+    - torch==1.8.0
+    - torchaudio==0.8.0
+    - torchvision==0.9.0
+    - tqdm==4.43.0
+    - typing-extensions==4.2.0

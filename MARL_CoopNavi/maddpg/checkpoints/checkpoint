@@ -1,0 +1,2 @@
+model_checkpoint_path: "./maddpg/checkpoints/"
+all_model_checkpoint_paths: "./maddpg/checkpoints/"

@@ -1,0 +1,43 @@
+{
+    "agent_args": {
+        "camera_args": {
+            "fixed_offset": 4.0,
+            "fov": 90,
+            "h": 160,
+            "w": 384,
+            "world_y": 1.4
+        },
+	"pid": {
+	    "1" : {"Kp": 0.5, "Ki": 0.20, "Kd":0.0},
+	    "2" : {"Kp": 0.7, "Ki": 0.10, "Kd":0.0},
+	    "3" : {"Kp": 1.0, "Ki": 0.10, "Kd":0.0},
+	    "4" : {"Kp": 1.0, "Ki": 0.50, "Kd":0.0}
+	},
+	"steer_points": {"1": 4, "2": 3, "3": 2, "4": 2}
+    },
+    "batch_size": 96,
+    "buffer_args": {
+        "aug_fix_iter": 819200,
+        "augment": "super_hard",
+        "batch_aug": 1,
+        "buffer_limit": 200000
+    },
+    "device": "cuda",
+    "epoch_per_episode": 5,
+    "log_dir": "/raid0/dian/image_models_peds/phase2_fixed4_false",
+    "log_iterations": 100,
+    "max_episode": 20,
+    "model_args": {
+        "backbone": "resnet34",
+        "model": "image_ss"
+    },
+    "optimizer_args": {
+        "lr": 0.0001
+    },
+    "phase1_ckpt": "/raid0/dian/image_models_peds/phase1_fixed4_false/model-64.th",
+    "port": 9000,
+    "speed_noise": 0.0,
+    "teacher_args": {
+        "model_path": "/raid0/dian/bird_view_models_peds/resnet18_cmd_bias_false_new/model-128.th"
+    }
+}

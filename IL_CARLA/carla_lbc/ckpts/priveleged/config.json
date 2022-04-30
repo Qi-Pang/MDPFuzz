@@ -1,0 +1,26 @@
+{
+    "data_args": {
+        "angle_jitter": 5,
+        "batch_size": 128,
+        "cmd_biased": false,
+        "crop_x_jitter": 5,
+        "crop_y_jitter": 0,
+        "dataset_dir": "/raid0/dian/carla_0.9.6_data",
+        "gap": 5,
+        "max_frames": "None",
+        "n_step": 5
+    },
+    "device": "cuda",
+    "log_dir": "/raid0/dian/bird_view_models_peds/resnet18_cmd_bias_false_new/",
+    "log_iterations": 1000,
+    "max_epoch": 1000,
+    "model_args": {
+        "backbone": "resnet18",
+        "input_channel": 7,
+        "model": "birdview_dian"
+    },
+    "optimizer_args": {
+        "lr": 0.0001
+    },
+    "resume": false
+}
