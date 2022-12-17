@@ -23,6 +23,10 @@ Run the following:
 conda create -n RLWalk python=3.6.3
 conda env update --name RLWalk --file environment_RLWalk.yml
 conda activate RLWalk
+cp ./gym/setup.py ./
+pip install -e .
+cp ./stable_baselines3/setup.py ./
+pip install -e .
 
 # Download trained models
 cd ./rl-baselines3-zoo
@@ -35,7 +39,7 @@ git clone https://github.com/DLR-RM/rl-trained-agents
 
 Check the default path of the model is correct in `./enjoy.py`. 
 
-Run `python enjoy.py --alg tqc --env BipedalWalkerHardcore-v3 --folder rl-trained-agents/ --em` to start fuzz testing.
+Run `python enjoy.py --alg tqc --env BipedalWalkerHardcore-v3 --folder rl-trained-agents/ --em --no-render` to start fuzz testing.
 
 ----
 

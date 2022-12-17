@@ -2,7 +2,7 @@
 ------
 Official implementation of **ISSTA 2022** paper: *MDPFuzz: Testing Models Solving Markov Decision Processes*.
 
-Paper link: [TBA].
+Paper link: [paper](https://dl.acm.org/doi/abs/10.1145/3533767.3534388)
 
 Website link: [MDPFuzz](https://sites.google.com/view/mdpfuzz/evaluation-results?authuser=0)
 
@@ -18,9 +18,6 @@ Website link: [MDPFuzz](https://sites.google.com/view/mdpfuzz/evaluation-results
 </p>
 
 For more results, please refer to our [website](https://sites.google.com/view/mdpfuzz/evaluation-results?authuser=0).
-
-----
-**Warning**: This repo is provided as-is and is only for research purposes. Please use it only on test systems with no sensitive data. You are responsible for protecting yourself, your data, and others from potential risks caused by this repo.
 
 ----
 
@@ -264,6 +261,10 @@ cd ./RL_BipedalWalker
 conda create -n RLWalk python=3.6.3
 conda env update --name RLWalk --file environment_RLWalk.yml
 conda activate RLWalk
+cp ./gym/setup.py ./
+pip install -e .
+cp ./stable_baselines3/setup.py ./
+pip install -e .
 
 # Download trained models
 cd ./rl-baselines3-zoo
@@ -274,7 +275,7 @@ git clone https://github.com/DLR-RM/rl-trained-agents
 
 Check the default path of the model is correct in `./enjoy.py`. 
 
-Run `python enjoy.py --alg tqc --env BipedalWalkerHardcore-v3 --folder rl-trained-agents/ --em` to start fuzz testing.
+Run `python enjoy.py --alg tqc --env BipedalWalkerHardcore-v3 --folder rl-trained-agents/ --em --no-render` to start fuzz testing.
 
 #### Root cause:
 
@@ -298,7 +299,22 @@ We provide our crash-triggering and normal data in folder `./results/`, and you 
 #### Citation
 
 ```bash
-[TBA]
+@inproceedings{10.1145/3533767.3534388,
+author = {Pang, Qi and Yuan, Yuanyuan and Wang, Shuai},
+title = {MDPFuzz: Testing Models Solving Markov Decision Processes},
+year = {2022},
+isbn = {9781450393799},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3533767.3534388},
+doi = {10.1145/3533767.3534388},
+booktitle = {Proceedings of the 31st ACM SIGSOFT International Symposium on Software Testing and Analysis},
+pages = {378–390},
+numpages = {13},
+keywords = {Markov decision procedure, Deep learning testing},
+location = {Virtual, South Korea},
+series = {ISSTA 2022}
+}
 ```
 
 ----
